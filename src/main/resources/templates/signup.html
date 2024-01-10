@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>WEAVUS 회원가입</title>
+</head>
+<body>
+    <form action="/signup" method="post">
+        ID : <input type="text" name="id" required><br>
+        PW1 : <input type="password" id="password1" name="password1" required><br>
+        PW2 : <input type="password" id="password2" name="password2" required><br>
+        주소 : <input type="text" name="address" required><br>
+        Email : <input type="email" name="email" required><br>
+        전화번호 : <input type="text"  name="phone" required><br>
+        이름 : <input type="text" name="name" required><br>
+        생년월일 : <input type="date" name="birthDate" required><br>
+        등록일 : <input type="date" name="registration" required><br>
+        입사일 : <input type="date" name="joinDate" required><br>
+        <button type="submit">회원가입</button>
+        <a href="/login">로그인 화면으로</a><br>
+        <span th:text="${msg}"></span>
+    </form>
+        <button onclick="window.open('cheakEmail','이메일 체크', 'width=400,height=250')">이메일 중복확인</button>
+</body>
+</html>

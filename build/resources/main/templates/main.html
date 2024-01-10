@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span th:text="${session.sessionUserName}"></span>님 환영합니다.
+<table border="1">
+    <tr th:each="user : ${userList}">
+        <td><a th:href="@{'/detail'+ ${user.id}}" th:text="${user.id}"></a> </td>
+        <td th:text="${user.name}"></td>
+    </tr>
+
+</table>
+</body>
+</html>
